@@ -1,7 +1,5 @@
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import useTheme from "@material-ui/core/styles/useTheme";
+import { Card, CardContent, CardHeader } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import {
   PolarAngleAxis,
   RadialBar,

@@ -1,5 +1,5 @@
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
+import { Fab } from "@mui/material";
+import { Add } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminAppBar from "../../admin/components/AdminAppBar";
@@ -114,7 +114,7 @@ const UserManagement = () => {
               onClick={() => handleOpenUserDialog()}
               size="small"
             >
-              <AddIcon />
+              <Add />
             </Fab>
           </AdminToolbar>
         ) : (

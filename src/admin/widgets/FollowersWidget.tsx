@@ -1,39 +1,37 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import { Avatar, Box, Card, CardContent, Typography } from "@mui/material";
+import {
+  ArrowDropDown,
+  ArrowDropUp,
+  ArrowRight,
+  EmojiEmotions,
+  Favorite,
+  ThumbUp,
+} from "@mui/icons-material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const socials = [
   {
     bgcolor: "primary.main",
-    icon: <ThumbUpIcon sx={{ color: "#fff" }} />,
+    icon: <ThumbUp sx={{ color: "#fff" }} />,
     name: "Likes",
-    trend: <ArrowDropUpIcon sx={{ color: "success.main" }} />,
+    trend: <ArrowDropUp sx={{ color: "success.main" }} />,
     unitKey: "admin.home.followers.units.likes",
     value: "26,789",
   },
   {
     bgcolor: "error.main",
-    icon: <FavoriteIcon style={{ color: "#fff" }} />,
+    icon: <Favorite style={{ color: "#fff" }} />,
     name: "Love",
-    trend: <ArrowRightIcon sx={{ color: "action.disabled" }} />,
+    trend: <ArrowRight sx={{ color: "action.disabled" }} />,
     unitKey: "admin.home.followers.units.love",
     value: "6,754",
   },
   {
     bgcolor: "warning.main",
-    icon: <EmojiEmotionsIcon style={{ color: "#fff" }} />,
+    icon: <EmojiEmotions style={{ color: "#fff" }} />,
     name: "Smiles",
-    trend: <ArrowDropDownIcon sx={{ color: "error.main" }} />,
+    trend: <ArrowDropDown sx={{ color: "error.main" }} />,
     unitKey: "admin.home.followers.units.smiles",
     value: "52,789",
   },

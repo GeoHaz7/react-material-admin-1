@@ -1,9 +1,5 @@
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import StarIcon from "@material-ui/icons/Star";
+import { Avatar, Button, Card, CardContent, Typography } from "@mui/material";
+import { Star } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from "../../auth/contexts/AuthProvider";
@@ -23,7 +19,7 @@ const AchievementWidget = () => {
         }}
       >
         <Avatar sx={{ bgcolor: "secondary.main", mb: 3 }}>
-          <StarIcon color="primary" />
+          <Star color="primary" />
         </Avatar>
         <Typography gutterBottom variant="h5" component="div">
           {t("admin.home.achievement.title", { name: userInfo?.firstName })}

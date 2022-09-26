@@ -6,13 +6,14 @@
   "homepage": "https://m6v3l9.github.io/react-material-admin",
   "license": "MIT",
   "dependencies": {
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.1.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@fullcalendar/daygrid": "5.7.0",
     "@fullcalendar/react": "5.7.0",
-    "@material-ui/core": "^5.0.0-alpha.35",
-    "@material-ui/icons": "^5.0.0-alpha.35",
-    "@material-ui/lab": "5.0.0-alpha.35",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/lab": "^5.0.0-alpha.100",
+    "@mui/material": "^5.10.6",
+    "@mui/x-date-pickers": "^5.0.3",
     "@sentry/react": "^6.4.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -50,7 +51,7 @@
     "build": "react-scripts build",
     "build:staging": "env-cmd -f .env.staging npm run build",
     "build:production": "env-cmd -f .env.production npm run build",
-    "predeploy": "yarn run build:production",
+    "predeploy": "npm run build:production",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "test": "react-scripts test"
@@ -72,5 +73,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
   }
 }

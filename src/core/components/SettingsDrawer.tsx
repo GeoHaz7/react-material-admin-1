@@ -1,14 +1,16 @@
-import Box from "@material-ui/core/Box";
-import Drawer from "@material-ui/core/Drawer";
-import FormControl from "@material-ui/core/FormControl";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import IconButton from "@material-ui/core/IconButton";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import ToggleButton from "@material-ui/core/ToggleButton";
-import ToggleButtonGroup from "@material-ui/core/ToggleButtonGroup";
-import Typography from "@material-ui/core/Typography";
-import CloseIcon from "@material-ui/icons/Close";
+import {
+  Box,
+  Drawer,
+  FormControl,
+  FormControlLabel,
+  IconButton,
+  Radio,
+  RadioGroup,
+  ToggleButton,
+  ToggleButtonGroup,
+  Typography,
+} from "@mui/material";
+import { Close } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { drawerWidth } from "../config/layout";
 import { useSettings } from "../contexts/SettingsProvider";
@@ -67,7 +69,7 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
       >
         <Typography variant="h5">{t("settings.drawer.title")}</Typography>
         <IconButton color="inherit" onClick={onDrawerToggle} edge="end">
-          <CloseIcon />
+          <Close />
         </IconButton>
       </Box>
       <Box sx={{ pl: 2, pr: 2 }}>

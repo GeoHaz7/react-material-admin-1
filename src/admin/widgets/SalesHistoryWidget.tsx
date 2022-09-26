@@ -1,10 +1,6 @@
-import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import { useTheme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { TrendingUp } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
@@ -73,7 +69,7 @@ const SalesWidget = ({ value }: SalesWidgetProps) => {
               {t("dashboard.salesHistory.unit")}
             </Typography>
           </Box>
-          <TrendingUpIcon sx={{ color: "text.secondary" }} />
+          <TrendingUp sx={{ color: "text.secondary" }} />
         </Box>
       </CardContent>
     </Card>

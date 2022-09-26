@@ -1,10 +1,12 @@
-import Accordion from "@material-ui/core/Accordion";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+  Link,
+  Typography,
+} from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
@@ -52,7 +54,7 @@ const Faq = () => {
         </Typography>
         {questions.map((question, index) => (
           <Accordion key={index}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionSummary expandIcon={<ExpandMore />}>
               <Typography component="p" variant="h6">
                 {t(question.title)}
               </Typography>

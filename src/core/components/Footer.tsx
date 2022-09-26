@@ -1,6 +1,4 @@
-import Box from "@material-ui/core/Box";
-import Link from "@material-ui/core/Link";
-import Typography from "@material-ui/core/Typography";
+import { Box, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {

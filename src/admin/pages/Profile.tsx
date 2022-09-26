@@ -1,12 +1,5 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Fab from "@material-ui/core/Fab";
-import Grid from "@material-ui/core/Grid";
-import Tab from "@material-ui/core/Tab";
-import Tabs from "@material-ui/core/Tabs";
-import Typography from "@material-ui/core/Typography";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import PersonIcon from "@material-ui/icons/Person";
+import { Avatar, Box, Fab, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { ExitToApp, Person } from "@mui/icons-material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, Outlet } from "react-router-dom";
@@ -53,7 +46,7 @@ const Profile = () => {
             disabled={isLoggingOut}
             onClick={handleLogout}
           >
-            <ExitToAppIcon />
+            <ExitToApp />
           </Fab>
         </AdminToolbar>
       </AdminAppBar>
@@ -76,7 +69,7 @@ const Profile = () => {
                 width: 160,
               }}
             >
-              <PersonIcon sx={{ fontSize: 120 }} />
+              <Person sx={{ fontSize: 120 }} />
             </Avatar>
             <Typography
               component="div"

@@ -1,23 +1,22 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Checkbox from "@material-ui/core/Checkbox";
-import Chip from "@material-ui/core/Chip";
-import IconButton from "@material-ui/core/IconButton";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TablePagination from "@material-ui/core/TablePagination";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import DeleteIcon from "@material-ui/icons/Delete";
-import EditIcon from "@material-ui/icons/Edit";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PersonIcon from "@material-ui/icons/Person";
+import {
+  Avatar,
+  Box,
+  Checkbox,
+  Chip,
+  IconButton,
+  ListItemIcon,
+  Menu,
+  MenuItem,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+  Typography,
+} from "@mui/material";
+import { Delete, Edit, MoreVert, Person } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Empty from "../../core/components/Empty";
@@ -160,7 +159,7 @@ const UserRow = ({
       <TableCell>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Avatar sx={{ mr: 3 }}>
-            <PersonIcon />
+            <Person />
           </Avatar>
           <Box>
             <Typography component="div" variant="h6">
@@ -194,7 +193,7 @@ const UserRow = ({
           disabled={processing}
           onClick={handleOpenActions}
         >
-          <MoreVertIcon />
+          <MoreVert />
         </IconButton>
         <Menu
           id="user-row-menu"
@@ -213,13 +212,13 @@ const UserRow = ({
         >
           <MenuItem onClick={handleEdit}>
             <ListItemIcon>
-              <EditIcon />
+              <Edit />
             </ListItemIcon>{" "}
             {t("common.edit")}
           </MenuItem>
           <MenuItem onClick={handleDelete}>
             <ListItemIcon>
-              <DeleteIcon />
+              <Delete />
             </ListItemIcon>{" "}
             {t("common.delete")}
           </MenuItem>

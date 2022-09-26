@@ -1,7 +1,9 @@
-import Grid from "@material-ui/core/Grid";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
+import { Grid } from "@mui/material";
+import {
+  AttachMoney,
+  ShoppingBasket,
+  SupervisorAccount,
+} from "@mui/icons-material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AdminAppBar from "../components/AdminAppBar";
@@ -61,19 +63,19 @@ const Dashboard = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <ProgressWidget
-            avatar={<SupervisorAccountIcon />}
+            avatar={<SupervisorAccount />}
             mb={2}
             title={t("dashboard.visitProgress.title")}
             value={75}
           />
           <ProgressWidget
-            avatar={<ShoppingBasketIcon />}
+            avatar={<ShoppingBasket />}
             mb={2}
             title={t("dashboard.orderProgress.title")}
             value={50}
           />
           <ProgressWidget
-            avatar={<AttachMoneyIcon />}
+            avatar={<AttachMoney />}
             title={t("dashboard.salesProgress.title")}
             value={25}
           />

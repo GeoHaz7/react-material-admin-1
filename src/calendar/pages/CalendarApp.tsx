@@ -1,6 +1,5 @@
-import Card from "@material-ui/core/Card";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
+import { Card, Fab } from "@mui/material";
+import { Add } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminAppBar from "../../admin/components/AdminAppBar";
@@ -19,10 +18,12 @@ const CalendarApp = () => {
   const snackbar = useSnackbar();
   const { t } = useTranslation();
 
-  const [eventDeleted, setEventDeleted] =
-    useState<string | undefined>(undefined);
-  const [eventUpdated, setEventUpdated] =
-    useState<Event | undefined>(undefined);
+  const [eventDeleted, setEventDeleted] = useState<string | undefined>(
+    undefined
+  );
+  const [eventUpdated, setEventUpdated] = useState<Event | undefined>(
+    undefined
+  );
   const [openConfirmDeleteDialog, setOpenConfirmDeleteDialog] = useState(false);
   const [openEventDialog, setOpenEventDialog] = useState(false);
 
@@ -102,7 +103,7 @@ const CalendarApp = () => {
             onClick={() => handleOpenEventDialog()}
             size="small"
           >
-            <AddIcon />
+            <Add />
           </Fab>
         </AdminToolbar>
       </AdminAppBar>

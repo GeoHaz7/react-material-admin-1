@@ -1,12 +1,13 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import IconButton from "@material-ui/core/IconButton";
-import useTheme from "@material-ui/core/styles/useTheme";
-import Typography from "@material-ui/core/Typography";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import DashboardIcon from "@material-ui/icons/Dashboard";
+import {
+  Avatar,
+  Box,
+  Card,
+  CardContent,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { ChevronRight, Dashboard } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
@@ -93,7 +94,7 @@ const ViewsWidget = () => {
         <Card sx={{ bgcolor: "background.default", mt: 5 }}>
           <CardContent sx={{ display: "flex", alignItems: "center" }}>
             <Avatar sx={{ bgcolor: "background.paper", mr: 2 }}>
-              <DashboardIcon />
+              <Dashboard />
             </Avatar>
             <Box sx={{ flexGrow: 1 }}>
               <Typography component="div" variant="h6">
@@ -105,7 +106,7 @@ const ViewsWidget = () => {
               component={RouterLink}
               to={`/${process.env.PUBLIC_URL}/admin/dashboard`}
             >
-              <ChevronRightIcon />
+              <ChevronRight />
             </IconButton>
           </CardContent>
         </Card>

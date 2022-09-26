@@ -1,7 +1,7 @@
-import { ThemeProvider as MuiThemeProvider } from "@material-ui/core";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AdapterDateFns from "@material-ui/lab/AdapterDateFns";
-import LocalizationProvider from "@material-ui/lab/LocalizationProvider";
+import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 import React, {
   createContext,
   useContext,

@@ -13,10 +13,10 @@
 
 ```
 # Install dependencies
-yarn install
+npm install
 
 # Run the app
-yarn start
+npm start
 ```
 
 This will automatically open [http://localhost:3000](http://localhost:3000).

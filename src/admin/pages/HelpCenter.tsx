@@ -1,16 +1,15 @@
-import Avatar from "@material-ui/core/Avatar";
-import Badge from "@material-ui/core/Badge";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import HelpIcon from "@material-ui/icons/Help";
-import MailIcon from "@material-ui/icons/Mail";
-import SchoolIcon from "@material-ui/icons/School";
-import SupportIcon from "@material-ui/icons/Support";
+import {
+  Avatar,
+  Badge,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardHeader,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { Help, Mail, School, Support } from "@mui/icons-material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
@@ -39,7 +38,7 @@ const HelpCenter = () => {
               <CardHeader
                 avatar={
                   <Avatar aria-label="Guides icon">
-                    <SchoolIcon />
+                    <School />
                   </Avatar>
                 }
               />
@@ -72,7 +71,7 @@ const HelpCenter = () => {
               <CardHeader
                 avatar={
                   <Avatar aria-label="FAQ icon">
-                    <HelpIcon />
+                    <Help />
                   </Avatar>
                 }
               />
@@ -95,7 +94,7 @@ const HelpCenter = () => {
               <CardHeader
                 avatar={
                   <Avatar aria-label="Support icon">
-                    <SupportIcon />
+                    <Support />
                   </Avatar>
                 }
               />
@@ -116,7 +115,7 @@ const HelpCenter = () => {
               <CardHeader
                 avatar={
                   <Avatar aria-label="Mail icon">
-                    <MailIcon />
+                    <Mail />
                   </Avatar>
                 }
               />

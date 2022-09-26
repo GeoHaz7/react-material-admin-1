@@ -1,16 +1,17 @@
-import Avatar from "@material-ui/core/Avatar";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
-import ListItemText from "@material-ui/core/ListItemText";
-import { useTheme } from "@material-ui/core/styles";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import PersonIcon from "@material-ui/icons/Person";
+import {
+  Avatar,
+  Card,
+  CardContent,
+  CardHeader,
+  IconButton,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemSecondaryAction,
+  ListItemText,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { ChevronRight, Person } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -51,7 +52,7 @@ const UsersWidget = () => {
             <ListItem disableGutters key={user.id}>
               <ListItemAvatar>
                 <Avatar>
-                  <PersonIcon />
+                  <Person />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -68,7 +69,7 @@ const UsersWidget = () => {
                   edge="end"
                   to={`/${process.env.PUBLIC_URL}/admin/user-management`}
                 >
-                  <ChevronRightIcon />
+                  <ChevronRight />
                 </IconButton>
               </ListItemSecondaryAction>
             </ListItem>

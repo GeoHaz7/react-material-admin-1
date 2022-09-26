@@ -3,18 +3,13 @@ import FullCalendar, {
   EventClickArg,
 } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import {
   alpha,
-  experimentalStyled as styled,
   useTheme,
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import EventIcon from "@material-ui/icons/Event";
+  experimentalStyled as styled,
+} from "@mui/material/styles";
+import { ArrowLeft, ArrowRight, Event as EventIcon } from "@mui/icons-material";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Event, eventColors } from "../types/event";
@@ -145,7 +140,7 @@ const Calendar = ({
             component="span"
             onClick={handlePrev}
           >
-            <ArrowLeftIcon />
+            <ArrowLeft />
           </IconButton>
           <Button onClick={handleToday}>{t("common.today")}</Button>
           <IconButton
@@ -154,7 +149,7 @@ const Calendar = ({
             edge="end"
             onClick={handleNext}
           >
-            <ArrowRightIcon />
+            <ArrowRight />
           </IconButton>
         </Box>
       </Box>

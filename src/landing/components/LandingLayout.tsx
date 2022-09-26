@@ -1,9 +1,5 @@
-import AppBar from "@material-ui/core/AppBar";
-import IconButton from "@material-ui/core/IconButton";
-import Paper from "@material-ui/core/Paper";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import SettingsIcon from "@material-ui/icons/Settings";
+import { AppBar, IconButton, Paper, Toolbar, Typography } from "@mui/material";
+import { Settings } from "@mui/icons-material";
 import React, { useState } from "react";
 import Footer from "../../core/components/Footer";
 import Logo from "../../core/components/Logo";
@@ -34,7 +30,7 @@ const LandingLayout = ({ children }: LandingLayoutProps) => {
             component="span"
             onClick={handleSettingsToggle}
           >
-            <SettingsIcon />
+            <Settings />
           </IconButton>
           <SettingsDrawer
             onDrawerToggle={handleSettingsToggle}

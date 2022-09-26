@@ -1,18 +1,22 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemText from "@material-ui/core/ListItemText";
-import AccountTreeIcon from "@material-ui/icons/AccountTree";
-import BarChartIcon from "@material-ui/icons/BarChart";
-import EventIcon from "@material-ui/icons/Event";
-import HelpCenterIcon from "@material-ui/icons/HelpCenter";
-import HomeIcon from "@material-ui/icons/Home";
-import PeopleIcon from "@material-ui/icons/People";
-import PersonIcon from "@material-ui/icons/Person";
-import SettingsIcon from "@material-ui/icons/Settings";
+import {
+  Avatar,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+} from "@mui/material";
+import {
+  BarChart,
+  Event,
+  HelpCenter,
+  Home,
+  People,
+  Person,
+  Settings,
+  AccountTree,
+} from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../auth/contexts/AuthProvider";
@@ -28,32 +32,32 @@ type AdminDrawerProps = {
 
 export const menuItems = [
   {
-    icon: HomeIcon,
+    icon: Home,
     key: "admin.drawer.menu.home",
     path: "/admin",
   },
   {
-    icon: BarChartIcon,
+    icon: BarChart,
     key: "admin.drawer.menu.dashboard",
     path: "/admin/dashboard",
   },
   {
-    icon: PeopleIcon,
+    icon: People,
     key: "admin.drawer.menu.userManagement",
     path: "/admin/user-management",
   },
   {
-    icon: EventIcon,
+    icon: Event,
     key: "admin.drawer.menu.calendar",
     path: "/admin/calendar",
   },
   {
-    icon: AccountTreeIcon,
+    icon: AccountTree,
     key: "admin.drawer.menu.projects",
     path: "/admin/projects",
   },
   {
-    icon: HelpCenterIcon,
+    icon: HelpCenter,
     key: "admin.drawer.menu.help",
     path: "/admin/help",
   },
@@ -106,7 +110,7 @@ const AdminDrawer = ({
         >
           <ListItemAvatar>
             <Avatar>
-              <PersonIcon />
+              <Person />
             </Avatar>
           </ListItemAvatar>
           {userInfo && (
@@ -121,7 +125,7 @@ const AdminDrawer = ({
         <ListItem button onClick={onSettingsToggle}>
           <ListItemAvatar>
             <Avatar>
-              <SettingsIcon />
+              <Settings />
             </Avatar>
           </ListItemAvatar>
           <ListItemText

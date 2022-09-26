@@ -1,9 +1,5 @@
-import Box from "@material-ui/core/Box";
-import Fab from "@material-ui/core/Fab";
-import Toolbar from "@material-ui/core/Toolbar";
-import Tooltip from "@material-ui/core/Tooltip";
-import CloseIcon from "@material-ui/icons/Close";
-import DeleteIcon from "@material-ui/icons/Delete";
+import { Box, Fab, Toolbar, Tooltip } from "@mui/material";
+import { Close, Delete } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
 interface SelectToolbarProps {
@@ -26,7 +22,7 @@ const SelectToolbar = ({
   return (
     <Toolbar sx={{ ml: 1, px: { xs: 3, sm: 6 } }}>
       <Fab color="secondary" onClick={onCancel} variant="extended">
-        <CloseIcon sx={{ mr: 1 }} />
+        <Close sx={{ mr: 1 }} />
         {numSelected} {t("common.selected")}
       </Fab>
       <Box sx={{ flexGrow: 1 }} />
@@ -38,7 +34,7 @@ const SelectToolbar = ({
             disabled={processing}
             onClick={() => onDelete(selected)}
           >
-            <DeleteIcon />
+            <Delete />
           </Fab>
         </Tooltip>
       )}

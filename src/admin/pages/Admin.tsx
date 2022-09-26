@@ -1,5 +1,4 @@
-import Box from "@material-ui/core/Box";
-import Toolbar from "@material-ui/core/Toolbar";
+import { Box, Toolbar } from "@mui/material";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import QueryWrapper from "../../core/components/QueryWrapper";

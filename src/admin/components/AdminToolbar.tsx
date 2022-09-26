@@ -1,7 +1,5 @@
-import IconButton from "@material-ui/core/IconButton";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import MenuIcon from "@material-ui/icons/Menu";
+import { IconButton, Toolbar, Typography } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 import { useSettings } from "../../core/contexts/SettingsProvider";
 
 type AdminToolbarProps = {
@@ -24,7 +22,7 @@ const AdminToolbar = ({ children, title }: AdminToolbarProps) => {
           marginRight: 2,
         }}
       >
-        <MenuIcon />
+        <Menu />
       </IconButton>
       <Typography variant="h2" component="h1" sx={{ flexGrow: 1 }}>
         {title}

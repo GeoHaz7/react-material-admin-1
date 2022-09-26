@@ -1,18 +1,20 @@
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import IconButton from "@material-ui/core/IconButton";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import TextField from "@material-ui/core/TextField";
-import DeleteIcon from "@material-ui/icons/Delete";
-import LoadingButton from "@material-ui/lab/LoadingButton";
-import MobileDateTimePicker from "@material-ui/lab/MobileDateTimePicker";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  FormControl,
+  FormLabel,
+  IconButton,
+  Radio,
+  RadioGroup,
+  TextField,
+  TextFieldProps,
+} from "@mui/material";
+import { Delete } from "@mui/icons-material";
+import { LoadingButton, MobileDateTimePicker } from "@mui/lab";
 import { getTime } from "date-fns";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
@@ -134,7 +136,7 @@ const EventDialog = ({
             onChange={(date: Date | null) =>
               formik.setFieldValue("start", date)
             }
-            renderInput={(params) => (
+            renderInput={(params: JSX.IntrinsicAttributes & TextFieldProps) => (
               <TextField
                 {...params}
                 id="start"
@@ -150,7 +152,7 @@ const EventDialog = ({
             inputFormat="dd/MM/yyyy H:mm"
             value={formik.values.end}
             onChange={(date: Date | null) => formik.setFieldValue("end", date)}
-            renderInput={(params) => (
+            renderInput={(params: JSX.IntrinsicAttributes & TextFieldProps) => (
               <TextField
                 {...params}
                 id="end"
@@ -195,7 +197,7 @@ const EventDialog = ({
               onClick={() => onDelete(event.id)}
               disabled={processing}
             >
-              <DeleteIcon />
+              <Delete />
             </IconButton>
           )}
           <Box sx={{ flexGrow: 1 }} />
