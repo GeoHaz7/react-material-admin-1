@@ -187,9 +187,9 @@
         "subTitle": "Something went wrong! If the problem persists, contact us!",
         "title": "Oops!"
       },
-      "underConstructions": {
+      "inProgress": {
         "subTitle": "We are actively working on this page.",
-        "title": "Under constructions!"
+        "title": "In Progress!"
       }
     },
     "reset": "Reset",

@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
-import Result from "../../core/components/Result";
-import { ReactComponent as ConstructionsSvg } from "../assets/constructions.svg";
+import Result from "../components/Result";
+import { ReactComponent as InProgressSvg } from "../assets/inProgress.svg";
 
-const UnderConstructions = () => {
+const InProgress = () => {
   const { t } = useTranslation();
 
   return (
@@ -19,12 +19,12 @@ const UnderConstructions = () => {
           {t("common.backHome")}
         </Button>
       }
-      image={<ConstructionsSvg />}
+      image={<InProgressSvg />}
       maxWidth="sm"
-      subTitle={t("common.errors.underConstructions.subTitle")}
-      title={t("common.errors.underConstructions.title")}
+      subTitle={t("common.errors.inProgress.subTitle")}
+      title={t("common.errors.inProgress.title")}
     />
   );
 };
 
-export default UnderConstructions;
+export default InProgress;

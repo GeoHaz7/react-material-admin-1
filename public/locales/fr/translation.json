@@ -187,9 +187,9 @@
         "subTitle": "Une erreur s'est produite! Si le problème persiste, contactez-nous!",
         "title": "Oups!"
       },
-      "underConstructions": {
+      "inProgress": {
         "subTitle": "Nous travaillons activement sur cette page",
-        "title": "Chantier en cours!"
+        "title": "En cours!"
       }
     },
     "reset": "Reset",

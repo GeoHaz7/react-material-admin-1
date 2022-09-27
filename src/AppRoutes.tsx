@@ -30,9 +30,7 @@ const CalendarApp = lazy(() => import("./calendar/pages/CalendarApp"));
 // Core
 const Forbidden = lazy(() => import("./core/pages/Forbidden"));
 const NotFound = lazy(() => import("./core/pages/NotFound"));
-const UnderConstructions = lazy(
-  () => import("./core/pages/UnderConstructions")
-);
+const InProgress = lazy(() => import("./core/pages/InProgress"));
 
 // Landing
 const Landing = lazy(() => import("./landing/pages/Landing"));
@@ -59,10 +57,7 @@ const AppRoutes = () => {
         <PrivateRoute
           path="projects"
           element={
-            <Navigate
-              to={`/${process.env.PUBLIC_URL}/under-construction`}
-              replace
-            />
+            <Navigate to={`/${process.env.PUBLIC_URL}/in-progress`} replace />
           }
         />
         <PrivateRoute path="user-management" element={<UserManagement />} />
@@ -71,7 +66,7 @@ const AppRoutes = () => {
       <Route path="forgot-password-submit" element={<ForgotPasswordSubmit />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
-      <Route path="under-construction" element={<UnderConstructions />} />
+      <Route path="in-progress" element={<InProgress />} />
       <Route path="403" element={<Forbidden />} />
       <Route path="404" element={<NotFound />} />
       <Route
