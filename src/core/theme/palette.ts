@@ -1,21 +1,5 @@
 import { PaletteMode } from "@mui/material";
 
-// Original
-// const palette = {
-//   grey: {
-//     "50": "#ECEFF1",
-//     "100": "#CFD8DC",
-//     "200": "#B0BEC5",
-//     "300": "#90A4AE",
-//     "400": "#78909C",
-//     "500": "#607D8B",
-//     "600": "#546E7A",
-//     "700": "#455A64",
-//     "800": "#37474F",
-//     "900": "#263238",
-//   },
-// };
-
 const palette = {
   grey: {
     "50": "#ECEFF1",
@@ -36,23 +20,24 @@ export const darkPalette = {
   contrastThreshold: 4.5,
   mode: "dark" as PaletteMode,
   error: {
-    main: "#FF8A65",
+    main: "#cc0033",
   },
   info: {
-    main: "#4FC3F7",
+    main: "#1f3c68",
   },
   primary: {
-    main: "#64B5F6",
-    contrastText: palette.grey[900],
+    main: "#007f96",
+    contrastText: "#D4D5D8",
   },
   secondary: {
-    main: palette.grey[900],
+    main: "#D4D5D8",
+    contrastText: "#007f96",
   },
   success: {
-    main: "#81C784",
+    main: "#99CC66",
   },
   warning: {
-    main: "#FFD54F",
+    main: "#F3BA1A",
   },
   text: {
     primary: palette.grey[100],
@@ -75,23 +60,24 @@ export const lightPalette = {
   contrastThreshold: 3,
   mode: "light" as PaletteMode,
   error: {
-    main: "#FF3D00",
+    main: "#cc0033",
   },
   info: {
-    main: "#00B0FF",
+    main: "#1f3c68",
   },
   primary: {
-    main: "#2962FF",
+    main: "#007f96",
     contrastText: "#FFF",
   },
   secondary: {
     main: "#FFF",
+    contrastText: "#007f96"
   },
   success: {
-    main: "#00E676",
+    main: "#99CC66",
   },
   warning: {
-    main: "#FFC400",
+    main: "#F3BA1A",
   },
   text: {
     primary: palette.grey[700],
