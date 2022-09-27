@@ -16,6 +16,7 @@ import {
   Person,
   Settings,
   AccountTree,
+  HomeWork,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -35,6 +36,11 @@ export const menuItems = [
     icon: Home,
     key: "admin.drawer.menu.home",
     path: "/admin",
+  },
+  {
+    icon: HomeWork,
+    key: "admin.drawer.menu.home2",
+    path: "/admin/admin2",
   },
   {
     icon: BarChart,
