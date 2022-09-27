@@ -42,7 +42,7 @@ const Profile = () => {
         <AdminToolbar>
           <Fab
             aria-label="logout"
-            color="secondary"
+            color="inherit"
             disabled={isLoggingOut}
             onClick={handleLogout}
           >
