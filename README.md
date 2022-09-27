@@ -1,32 +1,30 @@
-<p align="center">
-  <a href="https://m6v3l9.github.io/react-material-admin/" rel="noopener" target="_blank"><img width="120" src="https://m6v3l9.github.io/react-material-admin/logo.svg" alt="React Material Admin logo"></a></p>
-</p>
+# React Admin Web Shell
 
-<h1 align="center">React Material Admin</h1>
-<p align="center">
-<b>react-material-admin</b> is a free and open-source admin  application including many real-world examples. It is based on React and Material-UI.
-</p>
-
-[![react-material-admin-demo](https://cdn.dribbble.com/users/6538082/screenshots/15805144/media/5687464c7190019afb748863ac6957d3.png?compress=1&resize=1200x900)](https://m6v3l9.github.io/react-material-admin/)
+This project was bootstraped with the [react-material-admin](https://github.com/m6v3l9/react-material-admin) project. The goal is to use it as a web shell starting point.
 
 ## Getting Started
 
+1. Install dependences
+
 ```
-# Install dependencies
 npm install
-
-# Run the app
-npm start
 ```
 
-This will automatically open [http://localhost:3000](http://localhost:3000).
-
-## Features
+2. Run the app
 
 ```
+npm run start
+```
+
+This will automatically start the app and open it in the default browser. [http://localhost:3000](http://localhost:3000).
+
+_More scripts can be found in the `package.json` file._
+
+## Current Features
+
 - Admin
   - Home
-  - Dashboard/Charts
+  - Dashboard with Charts
   - FAQ
   - Help Center
   - Profile Activity
@@ -35,48 +33,122 @@ This will automatically open [http://localhost:3000](http://localhost:3000).
 - Auth
   - Forgot Password
   - Forgot Password Submit
-  - Login
+  - Login (local storage & mock server)
   - Register
 - Calendar App
+- Forbidden Page & Route
+- Not Found Page & Route
+- In Progress Page & Route
+- Landing Page
+- User Management - translation, dark/light mode, collapsable menu drawer
+
+## Current Pages
+
+- Admin
+  - Admin
+  - Dashboard
+  - FAQ
+  - HelpCenter
+  - Home (empty)
+  - Home2 (includes widgets for examples)
+  - Profile
+  - ProfileActivity
+  - ProfileInformation
+  - ProfilePassword
+- Auth
+  - ForgotPassword
+  - ForgotPasswordSubmit
+  - Login
+  - Register
+- Calendar
 - Core
   - Forbidden
-  - Not Found
-  - Under Constructions
+  - InProgress
+  - NotFound
 - Landing
-- User Management
-```
+- UserManagement
 
-## Technologies
+## Current Components
 
-| Package               | Description                                    | Docs                                                                            |
-| --------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------- |
-| Analytics             | Google Analytics                               | [Docs](https://analytics.google.com/analytics/web/react-ga)                     |
-| Bundle Size Analyzer  | Source map explorer                            | [Docs](https://create-react-app.dev/docs/analyzing-the-bundle-size)             |
-| Charts                | Recharts                                       | [Docs](https://recharts.org/)                                                   |
-| CI                    | Github CI                                      | [Docs]()                                                                        |
-| Code Splitting        | Route-based code splitting (included in React) | [Docs](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting) |
-| Components            | Material-UI                                    | [Docs](https://material-ui.com/)                                                |
-| Data Fetching         | React Query Toolkit                            | [Docs](https://react-query.tanstack.com/)                                       |
-| Deployment            | Github Pages                                   | [Docs](https://create-react-app.dev/docs/deployment#github-pages)               |
-| Environment Variables | Dotenv (included in Create React App)          | [Docs](https://create-react-app.dev/docs/adding-custom-environment-variables)   |
-| Error Monitoring      | Sentry                                         | [Docs](https://docs.sentry.io/platforms/javascript/guides/react/)               |
-| Form                  | Formik                                         | [Docs](https://formik.org/)                                                     |
-| I18N                  | react-i18next                                  | [Docs](https://react.i18next.com/)                                              |
-| Routing               | React Router                                   | [Docs](https://reactrouter.com/)                                                |
-| Theming (+ dark mode) | Material-UI                                    | [Docs](https://material-ui.com/customization/theming/)                          |
-| Toolchain             | Create React App                               | [Docs](https://create-react-app.dev/)                                           |
-| TypeScript            | TypeScript                                     | [Docs](https://create-react-app.dev/docs/adding-typescript/)                    |
-| Validation            | Yup                                            | [Docs](https://github.com/jquense/yup)                                          |
+- Admin
+  - AdminAppBar
+  - AdminDrawer
+  - AdminToolbar
+  - RecentNotifications
+- Calendar
+  - Calendar
+  - EventDialog
+- Core
+  - BoxedLayout
+  - ConfirmDialog
+  - Empty
+  - Footer
+  - Loader
+  - Logo
+  - PrivateRoute
+  - QueryWrapper
+  - Result
+  - SelectToolbar
+  - SettingsDrawer
+  - SvgContainer
+- Landing
+  - LandingLayout
+- Users
+  - UserDialog
+  - UserTable
 
-## Coming Soon
+## Current Widgets
 
-| Package      | Description                                 | Docs                            |
-| ------------ | ------------------------------------------- | ------------------------------- |
-| Drag & Drop  | Add Projects page with Drag & Drop features |                                 |
-| E2E Testing  | Cypress                                     | [Docs](https://www.cypress.io/) |
-| Unit Testing | Jest                                        | [Docs](https://jestjs.io/)      |
+- Admin
+  - AchievementWidget
+  - ActivityWidget
+  - BudgetWidget
+  - CircleProgressWidget
+  - FollowersWidget
+  - MeetingWidget
+  - OverviewWidget
+  - PersonalTargetsWidget
+  - ProgressWidget
+  - SalesByAgeWidget
+  - SalesByCategoryWidget
+  - SalesHistoryWidget
+  - TeamProgressWidget
+  - UsersWidget
+  - ViewsWidget
+  - WelcomeWidget
 
-## License
+## Tech Used
 
-This project is licensed under the terms of the
-[MIT license](/LICENSE).
+| Package               | Description                                                                  | Docs                                                                            |
+| --------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Bundle Size Analyzer  | Source map explorer _(analyzes JS bundles to determine bloat and tech debt)_ | [Docs](https://create-react-app.dev/docs/analyzing-the-bundle-size)             |
+| Charts                | Recharts                                                                     | [Docs](https://recharts.org/)                                                   |
+| Code Splitting        | Route-based code splitting _(included in React)_                             | [Docs](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting) |
+| Components            | Material-UI                                                                  | [Docs](https://material-ui.com/)                                                |
+| Data Fetching         | React Query Toolkit _(asynchronous state management)_                        | [Docs](https://react-query.tanstack.com/)                                       |
+| Deployment            | Github Pages                                                                 | [Docs](https://create-react-app.dev/docs/deployment#github-pages)               |
+| Environment Variables | Dotenv _(included in Create React App)_                                      | [Docs](https://create-react-app.dev/docs/adding-custom-environment-variables)   |
+| Error Monitoring      | Sentry _(error tracking)_                                                    | [Docs](https://docs.sentry.io/platforms/javascript/guides/react/)               |
+| Form                  | Formik _(building forms within React)_                                       | [Docs](https://formik.org/)                                                     |
+| I18N                  | react-i18next _(internationalization framework for React)_                   | [Docs](https://react.i18next.com/)                                              |
+| Routing               | React Router                                                                 | [Docs](https://reactrouter.com/)                                                |
+| Theming (+ dark mode) | Material-UI                                                                  | [Docs](https://material-ui.com/customization/theming/)                          |
+| Toolchain             | Create React App                                                             | [Docs](https://create-react-app.dev/)                                           |
+| TypeScript            | TypeScript                                                                   | [Docs](https://create-react-app.dev/docs/adding-typescript/)                    |
+| Validation            | Yup _(value parsing and validation at runtime)_                              | [Docs](https://github.com/jquense/yup)                                          |
+
+## Customized Work Done to Get to Current State
+
+- Migrated from `yarn` to `npm`
+- Updated all material-ui imports
+- Replaced favicon
+- Replaced logo
+- Replaced font family
+- Replaced colors within color palette to be in line with Synergex's styling guide
+- Added a new menu item, including new route
+- Updated translations where appropriate
+- Replaced images on Login, Forbidden, In Progress, and Not Found pages
+
+## Notes
+
+Overall, it seems like a pretty good starting point for what we are looking for. It's simple enough that there is not an overload of prebuilt components and/or pages, which makes it easier to build from and refactor to our personal preferences. Plus, material basics are already set up which is kind of nice. However, we'd need to add **testing** for all components, pages, and widgets and a little **refactoring** within the code and file tree might need to be done to make it more scalable for our purposes. We also might want to look at how the **routing** is set up as well as **hot reload** (currently it's glitchy). We also need to set up better rules within the **`tsconfig.json`** file and add **prettier**.
