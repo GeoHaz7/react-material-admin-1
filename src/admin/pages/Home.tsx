@@ -12,12 +12,7 @@ const Home = () => {
           <RecentNotifications />
         </AdminToolbar>
       </AdminAppBar>
-      <Grid container spacing={2}>
-        <p>
-          This page is designed to hold some important information for the
-          application.
-        </p>
-      </Grid>
+      <Grid container spacing={2}></Grid>
     </React.Fragment>
   );
 };

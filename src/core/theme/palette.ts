@@ -40,9 +40,9 @@ export const darkPalette = {
     main: "#F3BA1A",
   },
   text: {
-    primary: palette.grey[100],
-    secondary: palette.grey[300],
-    disabled: palette.grey[600],
+    primary: palette.grey[50],
+    secondary: palette.grey[100],
+    disabled: palette.grey[300],
   },
   divider: palette.grey[700],
   background: {
