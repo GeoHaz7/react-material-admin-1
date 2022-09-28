@@ -4,7 +4,7 @@ This project was bootstraped with the [react-material-admin](https://github.com/
 
 ## Getting Started
 
-1. Install dependences
+1. Install dependencies
 
 ```
 npm install
@@ -152,3 +152,16 @@ _More scripts can be found in the `package.json` file._
 ## Notes
 
 Overall, it seems like a pretty good starting point for what we are looking for. It's simple enough that there is not an overload of prebuilt components and/or pages, which makes it easier to build from and refactor to our personal preferences. Plus, material basics are already set up which is kind of nice. However, we'd need to add **testing** for all components, pages, and widgets and a little **refactoring** within the code and file tree might need to be done to make it more scalable for our purposes. We also might want to look at how the **routing** is set up as well as **hot reload** (currently it's glitchy). We also need to set up better rules within the **`tsconfig.json`** file and add **prettier**.
+
+### Think Abouts to Add/Update
+
+- [ ] Dependency packages audit
+- [ ] Redo file organization
+- [ ] Add unit tests (coverage %?)
+- [ ] E2E testing?
+- [ ] Add comments within code
+- [ ] Routing might need a bit of refactoring/Better comments
+- [ ] Debug hot reload functionality
+- [ ] Update `tsconfig.json` file
+- [ ] Add Prettier (formatter)
+- [ ] Set up repo with SSL Cert locally
