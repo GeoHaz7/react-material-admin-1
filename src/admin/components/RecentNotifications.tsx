@@ -9,18 +9,18 @@ import {
   ListItemAvatar,
   ListItemText,
   Popover,
-} from "@mui/material";
-import { Notifications, Person } from "@mui/icons-material";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import { useMemo, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import Empty from "../../core/components/Empty";
-import Loader from "../../core/components/Loader";
-import Result from "../../core/components/Result";
-import { useDateLocale } from "../../core/hooks/useDateLocale";
-import { notificationKeys } from "../config/notification";
-import { useNotifications } from "../hooks/useNotifications";
+} from '@mui/material';
+import { Notifications, Person } from '@mui/icons-material';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import { useMemo, useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
+import Empty from '../../core/components/Empty';
+import Loader from '../../core/components/Loader';
+import Result from '../../core/components/Result';
+import { useDateLocale } from '../../core/hooks/useDateLocale';
+import { notificationKeys } from '../config/notification';
+import { useNotifications } from '../hooks/useNotifications';
 
 const RecentNotifications = () => {
   const locale = useDateLocale();
@@ -46,12 +46,12 @@ const RecentNotifications = () => {
   };
 
   return (
-    <Box>
+    <Box component="div">
       <IconButton
         id="notifications-button"
         aria-controls="notifications-popover"
         aria-haspopup="true"
-        aria-expanded={open ? "true" : "false"}
+        aria-expanded={open ? 'true' : 'false'}
         aria-label="show recent notifications"
         color="inherit"
         onClick={handleClick}
@@ -66,15 +66,15 @@ const RecentNotifications = () => {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
+          vertical: 'bottom',
+          horizontal: 'right',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
+          vertical: 'top',
+          horizontal: 'right',
         }}
       >
-        <Box sx={{ width: 360 }}>
+        <Box component="div" sx={{ width: 360 }}>
           {!isLoading && !isError && data && data.length > 0 && (
             <List
               component="nav"
@@ -86,7 +86,7 @@ const RecentNotifications = () => {
                   button
                   component={NavLink}
                   key={notification.id}
-                  to={""}
+                  to={''}
                 >
                   <ListItemAvatar>
                     <Avatar>
@@ -112,24 +112,26 @@ const RecentNotifications = () => {
             </List>
           )}
           {!isLoading && !isError && (!data || data.length === 0) && (
-            <Empty title={t("admin.header.notifications.empty.title")} />
+            <Empty title={t('admin.header.notifications.empty.title')} />
           )}
           {isError && (
-            <Result
-              status="error"
-              subTitle={t("common.errors.unexpected.subTitle")}
-              title={t("common.errors.unexpected.title")}
-            />
+            <div>
+              <Result
+                status="error"
+                subTitle={t('common.errors.unexpected.subTitle')}
+                title={t('common.errors.unexpected.title')}
+              />
+            </div>
           )}
           {isLoading && <Loader />}
-          <Box sx={{ px: 2, pb: 2 }}>
+          <Box component="div" sx={{ px: 2, pb: 2 }}>
             <Button
               color="secondary"
               fullWidth
-              sx={{ bgcolor: "background.default" }}
+              sx={{ bgcolor: 'background.default' }}
               variant="contained"
             >
-              {t("admin.header.notifications.seeAll")}
+              {t('admin.header.notifications.seeAll')}
             </Button>
           </Box>
         </Box>

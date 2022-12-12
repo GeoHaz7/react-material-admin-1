@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import {
   Timeline,
   TimelineConnector,
@@ -6,13 +6,13 @@ import {
   TimelineDot,
   TimelineItem,
   TimelineSeparator,
-} from "@mui/lab";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import { Trans, useTranslation } from "react-i18next";
-import Empty from "../../core/components/Empty";
-import { useDateLocale } from "../../core/hooks/useDateLocale";
-import { logKeys } from "../config/activity";
-import { useActivityLogs } from "../hooks/useActivityLogs";
+} from '@mui/lab';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import { Trans, useTranslation } from 'react-i18next';
+import Empty from '../../core/components/Empty';
+import { useDateLocale } from '../../core/hooks/useDateLocale';
+import { logKeys } from '../config/activity';
+import { useActivityLogs } from '../hooks/useActivityLogs';
 
 const ProfileActivity = () => {
   const locale = useDateLocale();
@@ -21,11 +21,14 @@ const ProfileActivity = () => {
   const { data } = useActivityLogs();
 
   if (!data || data.length === 0) {
-    return <Empty title={t("profile.activity.empty")} />;
+    return <Empty title={t('profile.activity.empty')} />;
   }
 
   return (
-    <Box sx={{ "& .MuiTimelineItem-root:before": { content: "none" } }}>
+    <Box
+      component={'div'}
+      sx={{ '& .MuiTimelineItem-root:before': { content: 'none' } }}
+    >
       <Timeline>
         {data.map((log) => (
           <TimelineItem key={log.id}>

@@ -1,5 +1,5 @@
-import Box, { BoxProps } from "@mui/material/Box";
-import { ReactComponent as LogoSvg } from "../assets/logo.svg";
+import Box, { BoxProps } from '@mui/material/Box';
+import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 
 type LogoProps = {
   colored?: boolean;
@@ -8,7 +8,7 @@ type LogoProps = {
 
 const Logo = ({ colored = false, size = 40, ...boxProps }: LogoProps) => {
   return (
-    <Box {...boxProps}>
+    <Box {...boxProps} component="div">
       <LogoSvg height={size} width={size} />
     </Box>
   );

@@ -1,10 +1,10 @@
-import { Box, Toolbar } from "@mui/material";
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
-import QueryWrapper from "../../core/components/QueryWrapper";
-import SettingsDrawer from "../../core/components/SettingsDrawer";
-import { useSettings } from "../../core/contexts/SettingsProvider";
-import AdminDrawer from "../components/AdminDrawer";
+import { Box, Toolbar } from '@mui/material';
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import QueryWrapper from '../../core/components/QueryWrapper';
+import SettingsDrawer from '../../core/components/SettingsDrawer';
+import { useSettings } from '../../core/contexts/SettingsProvider';
+import AdminDrawer from '../components/AdminDrawer';
 
 const AdminLayout = () => {
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -16,7 +16,7 @@ const AdminLayout = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box component={'div'} sx={{ display: 'flex' }}>
       <AdminDrawer
         collapsed={collapsed}
         mobileOpen={open}

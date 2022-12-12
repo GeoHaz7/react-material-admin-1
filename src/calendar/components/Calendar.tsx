@@ -1,20 +1,20 @@
 import FullCalendar, {
   CalendarOptions,
   EventClickArg,
-} from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+} from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 import {
   alpha,
   useTheme,
   experimentalStyled as styled,
-} from "@mui/material/styles";
-import { ArrowLeft, ArrowRight, Event as EventIcon } from "@mui/icons-material";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Event, eventColors } from "../types/event";
+} from '@mui/material/styles';
+import { ArrowLeft, ArrowRight, Event as EventIcon } from '@mui/icons-material';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Event, eventColors } from '../types/event';
 
-const StyledWrapper = styled("div")(
+const StyledWrapper = styled('div')(
   ({ theme }) => `
   .fc-theme-standard .fc-scrollgrid {
     border-color: ${theme.palette.divider};
@@ -66,10 +66,10 @@ const Calendar = ({
   const theme = useTheme();
   const { i18n, t } = useTranslation();
 
-  const [viewTitle, setViewTitle] = useState("");
+  const [viewTitle, setViewTitle] = useState('');
   const [calendarRef, setCalendarRef] = useState<FullCalendar | null>(null);
 
-  const onCalendarRefSet = useCallback((ref) => {
+  const onCalendarRefSet = useCallback((ref: any) => {
     if (ref !== null) {
       setCalendarRef(ref);
     }
@@ -122,19 +122,20 @@ const Calendar = ({
     <React.Fragment>
       {/* Start - Custom Header Bar */}
       <Box
+        component={'div'}
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
           px: 3,
           py: 2,
         }}
       >
-        <Typography sx={{ display: "inline-flex" }} variant="h5">
+        <Typography sx={{ display: 'inline-flex' }} variant="h5">
           <EventIcon sx={{ mr: 2 }} />
           {viewTitle}
-        </Typography>
-        <Box>
+        </Typography>{' '}
+        <Box component={'div'}>
           <IconButton
             aria-label="previous"
             component="span"
@@ -142,7 +143,7 @@ const Calendar = ({
           >
             <ArrowLeft />
           </IconButton>
-          <Button onClick={handleToday}>{t("common.today")}</Button>
+          <Button onClick={handleToday}>{t('common.today')}</Button>
           <IconButton
             aria-label="next"
             component="span"
@@ -164,8 +165,8 @@ const Calendar = ({
           events={eventSource}
           eventClick={handleEventClick}
           eventTimeFormat={{
-            hour: "numeric",
-            minute: "2-digit",
+            hour: 'numeric',
+            minute: '2-digit',
             meridiem: false,
           }}
           {...calendarProps}

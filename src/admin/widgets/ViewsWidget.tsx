@@ -5,33 +5,33 @@ import {
   CardContent,
   IconButton,
   Typography,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import { ChevronRight, Dashboard } from "@mui/icons-material";
-import { useTranslation } from "react-i18next";
-import { Link as RouterLink } from "react-router-dom";
-import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { ChevronRight, Dashboard } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
+import { Link as RouterLink } from 'react-router-dom';
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 
 const data = [
   {
-    name: "Jan",
+    name: 'Jan',
     fb: 2.5,
   },
   {
-    name: "Feb",
+    name: 'Feb',
     fb: 1.4,
   },
   {
-    name: "Mar",
+    name: 'Mar',
     fb: 6,
   },
   {
-    name: "Avr",
+    name: 'Avr',
     fb: 4,
   },
 ];
 
-const views = "6.967.431";
+const views = '6.967.431';
 
 const ViewsWidget = () => {
   const theme = useTheme();
@@ -46,12 +46,12 @@ const ViewsWidget = () => {
           marginBottom={2}
           variant="body2"
         >
-          {t("admin.home.views.unit")}
+          {t('admin.home.views.unit')}
         </Typography>
         <Typography align="center" component="div" variant="h2">
           {views}
         </Typography>
-        <Box sx={{ height: 224 }}>
+        <Box component={'div'} sx={{ height: 224 }}>
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
               width={500}
@@ -91,14 +91,14 @@ const ViewsWidget = () => {
             </AreaChart>
           </ResponsiveContainer>
         </Box>
-        <Card sx={{ bgcolor: "background.default", mt: 5 }}>
-          <CardContent sx={{ display: "flex", alignItems: "center" }}>
-            <Avatar sx={{ bgcolor: "background.paper", mr: 2 }}>
+        <Card sx={{ bgcolor: 'background.default', mt: 5 }}>
+          <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
+            <Avatar sx={{ bgcolor: 'background.paper', mr: 2 }}>
               <Dashboard />
             </Avatar>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box component={'div'} sx={{ flexGrow: 1 }}>
               <Typography component="div" variant="h6">
-                {t("admin.home.views.action")}
+                {t('admin.home.views.action')}
               </Typography>
             </Box>
             <IconButton

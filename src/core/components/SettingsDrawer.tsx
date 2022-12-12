@@ -9,11 +9,11 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Typography,
-} from "@mui/material";
-import { Close } from "@mui/icons-material";
-import { useTranslation } from "react-i18next";
-import { drawerWidth } from "../config/layout";
-import { useSettings } from "../contexts/SettingsProvider";
+} from '@mui/material';
+import { Close } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
+import { drawerWidth } from '../config/layout';
+import { useSettings } from '../contexts/SettingsProvider';
 
 type SettingsDrawerProps = {
   onDrawerToggle: () => void;
@@ -31,7 +31,7 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
   } = useSettings();
   const { i18n, t } = useTranslation();
 
-  const handleDirectionChange = (_: any, direction: "ltr" | "rtl") => {
+  const handleDirectionChange = (_: any, direction: 'ltr' | 'rtl') => {
     changeDirection(direction);
   };
 
@@ -53,33 +53,34 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
       open={open}
       onClose={onDrawerToggle}
       sx={{
-        "& .MuiDrawer-paper": {
+        '& .MuiDrawer-paper': {
           width: drawerWidth,
         },
       }}
       variant="temporary"
     >
       <Box
+        component={'div'}
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
           p: 2,
         }}
       >
-        <Typography variant="h5">{t("settings.drawer.title")}</Typography>
+        <Typography variant="h5">{t('settings.drawer.title')}</Typography>
         <IconButton color="inherit" onClick={onDrawerToggle} edge="end">
           <Close />
         </IconButton>
       </Box>
-      <Box sx={{ pl: 2, pr: 2 }}>
+      <Box component={'div'} sx={{ pl: 2, pr: 2 }}>
         <Typography
           gutterBottom
           id="settings-language"
           marginTop={3}
           variant="h6"
         >
-          {t("settings.drawer.language.label")}
+          {t('settings.drawer.language.label')}
         </Typography>
         <FormControl>
           <RadioGroup
@@ -91,17 +92,17 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
             <FormControlLabel
               value="en"
               control={<Radio />}
-              label={t("settings.drawer.language.options.en")}
+              label={t('settings.drawer.language.options.en')}
             />
             <FormControlLabel
               value="fr"
               control={<Radio />}
-              label={t("settings.drawer.language.options.fr")}
+              label={t('settings.drawer.language.options.fr')}
             />
           </RadioGroup>
         </FormControl>
         <Typography gutterBottom id="settings-mode" marginTop={3} variant="h6">
-          {t("settings.drawer.mode.label")}
+          {t('settings.drawer.mode.label')}
         </Typography>
         <ToggleButtonGroup
           color="primary"
@@ -111,14 +112,14 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
           onChange={handleModeChange}
         >
           <ToggleButton value="light">
-            {t("settings.drawer.mode.options.light")}
+            {t('settings.drawer.mode.options.light')}
           </ToggleButton>
           <ToggleButton value="dark">
-            {t("settings.drawer.mode.options.dark")}
+            {t('settings.drawer.mode.options.dark')}
           </ToggleButton>
         </ToggleButtonGroup>
         <Typography gutterBottom id="settings-mode" marginTop={3} variant="h6">
-          {t("settings.drawer.direction.label")}
+          {t('settings.drawer.direction.label')}
         </Typography>
         <ToggleButtonGroup
           color="primary"
@@ -128,10 +129,10 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
           onChange={handleDirectionChange}
         >
           <ToggleButton value="ltr">
-            {t("settings.drawer.direction.options.ltr")}
+            {t('settings.drawer.direction.options.ltr')}
           </ToggleButton>
           <ToggleButton value="rtl">
-            {t("settings.drawer.direction.options.rtl")}
+            {t('settings.drawer.direction.options.rtl')}
           </ToggleButton>
         </ToggleButtonGroup>
         <Typography
@@ -140,7 +141,7 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
           marginTop={3}
           variant="h6"
         >
-          {t("settings.drawer.sidebar.label")}
+          {t('settings.drawer.sidebar.label')}
         </Typography>
         <ToggleButtonGroup
           color="primary"
@@ -150,10 +151,10 @@ const SettingsDrawer = ({ onDrawerToggle, open }: SettingsDrawerProps) => {
           onChange={handleSidebarChange}
         >
           <ToggleButton value={true}>
-            {t("settings.drawer.sidebar.options.collapsed")}
+            {t('settings.drawer.sidebar.options.collapsed')}
           </ToggleButton>
           <ToggleButton value={false}>
-            {t("settings.drawer.sidebar.options.full")}
+            {t('settings.drawer.sidebar.options.full')}
           </ToggleButton>
         </ToggleButtonGroup>
       </Box>
