@@ -3,7 +3,6 @@ import { useLoader } from '@react-three/fiber';
 import { Environment, OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Suspense } from 'react';
-import { BoxGeometry, Mesh, MeshBasicMaterial } from 'three';
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, 'Poimandres.gltf');
